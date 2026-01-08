@@ -4,13 +4,17 @@
   --background: #faf8f5;
   --foreground: #1a2744;
 
-  /* Fresh Fleet Brand Colors - Navy + Teal (like Pink's Navy + Pink) */
+  /* Fresh Fleet Brand Colors - Warm neighborhood palette */
   --navy: #1a2744;
   --navy-light: #2d3a52;
   --teal: #0d9488;
   --teal-light: #14b8a6;
   --cream: #faf8f5;
   --cream-dark: #f0ebe3;
+
+  /* Warm accent colors */
+  --warm-gray: #64748b;
+  --warm-brown: #78716c;
 }
 
 @theme inline {
@@ -20,6 +24,7 @@
   --font-mono: var(--font-geist-mono);
   --font-display: var(--font-display);
   --font-body: var(--font-body);
+  --font-script: var(--font-script);
 }
 
 body {
@@ -32,51 +37,43 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Retro 50s Display Headlines - Bebas Neue with text-stroke effect */
+/* Slab Serif Headlines - sturdy and trustworthy */
 .font-display {
-  font-family: var(--font-display), system-ui, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 700;
 }
 
-/* Pink's Windows style headline - white fill with colored outline */
-.headline-retro {
-  font-family: var(--font-display), system-ui, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-  color: white;
-  -webkit-text-stroke: 2px var(--navy);
-  text-stroke: 2px var(--navy);
-  paint-order: stroke fill;
-}
-
-/* Larger stroke for bigger text */
-.headline-retro-lg {
-  font-family: var(--font-display), system-ui, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-  color: white;
-  -webkit-text-stroke: 3px var(--navy);
-  text-stroke: 3px var(--navy);
-  paint-order: stroke fill;
-}
-
-/* Teal accent version */
-.headline-retro-teal {
-  font-family: var(--font-display), system-ui, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-  color: white;
-  -webkit-text-stroke: 2px var(--teal);
-  text-stroke: 2px var(--teal);
-  paint-order: stroke fill;
-}
-
-/* Solid display for when we don't want outline effect */
+/* Headline styles - warm and inviting */
 .headline-display {
-  font-family: var(--font-display), system-ui, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Large warm headlines */
+.headline-warm {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* Casual script for accents - diner menu vibe */
+.font-script {
+  font-family: var(--font-script), cursive;
+  font-weight: 500;
+}
+
+/* Script tagline style */
+.tagline-script {
+  font-family: var(--font-script), cursive;
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+/* Body text - rounded and friendly */
+.font-body {
+  font-family: var(--font-body), system-ui, sans-serif;
 }
 
 /* Gradient text */
@@ -115,4 +112,29 @@ html {
 
 .nav-link:hover::after {
   width: 100%;
+}
+
+/* Warm button style */
+.btn-warm {
+  background: var(--navy);
+  color: white;
+  border-radius: 0.5rem;
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-warm:hover {
+  background: var(--navy-light);
+  transform: translateY(-1px);
+}
+
+/* Card hover effect */
+.card-warm {
+  transition: all 0.3s ease;
+}
+
+.card-warm:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -8px rgba(26, 39, 68, 0.15);
 }

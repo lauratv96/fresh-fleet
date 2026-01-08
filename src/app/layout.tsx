@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Bebas_Neue, DM_Sans } from "next/font/google";
+import { Geist, Geist_Mono, Rokkitt, Nunito, Caveat } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,18 +12,25 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// DM Sans for body text - clean and modern
-const dmSans = DM_Sans({
+// Rokkitt - vintage slab serif for headlines, sturdy and trustworthy
+const rokkitt = Rokkitt({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
+
+// Nunito - rounded, friendly sans-serif for body text
+const nunito = Nunito({
   variable: "--font-body",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
-// Bebas Neue - classic retro condensed display font (like Pink's Windows)
-const bebasNeue = Bebas_Neue({
-  variable: "--font-display",
+// Caveat - casual handwritten script for warmth accents (diner menu vibe)
+const caveat = Caveat({
+  variable: "--font-script",
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -55,7 +62,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} ${dmSans.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${rokkitt.variable} ${nunito.variable} ${caveat.variable} antialiased`}
       >
         {children}
       </body>
