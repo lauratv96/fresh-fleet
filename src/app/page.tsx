@@ -111,15 +111,17 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {/* Hero Image Placeholder */}
+            {/* Hero Image */}
             <div className="relative">
-              <div className="aspect-square rounded-3xl bg-gradient-to-br from-teal-100 to-cyan-100 flex items-center justify-center overflow-hidden">
-                <div className="text-center p-8">
-                  <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-teal-500 to-cyan-500 flex items-center justify-center animate-float">
-                    <TruckIcon />
-                  </div>
-                  <p className="text-teal-700 font-medium">Fresh Fleet Delivery</p>
-                </div>
+              <div className="aspect-[16/9] lg:aspect-square rounded-3xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/hero-image.png"
+                  alt="Fresh Fleet delivery van with organized linens outside industrial laundry facility"
+                  width={800}
+                  height={450}
+                  className="w-full h-full object-cover"
+                  priority
+                />
               </div>
               {/* Floating stats card */}
               <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-6 border border-slate-100">
