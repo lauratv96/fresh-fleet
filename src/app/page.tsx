@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-// Custom Icons matching Pink's style
+// Custom Icons matching Pink's line-art style
 const ClockIcon = () => (
   <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth={2}>
     <circle cx="24" cy="24" r="20" />
@@ -45,21 +45,21 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Left nav */}
-            <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide uppercase text-[#1a2744]">
-              <a href="#services" className="hover:text-teal-600 transition-colors">Services</a>
-              <a href="#business" className="hover:text-teal-600 transition-colors">Business</a>
+            <div className="hidden md:flex items-center gap-8 headline-display text-sm tracking-widest text-[#1a2744]">
+              <a href="#servicios" className="nav-link hover:text-teal-600 transition-colors">Servicios</a>
+              <a href="#empresas" className="nav-link hover:text-teal-600 transition-colors">Empresas</a>
             </div>
 
             {/* Logo - Center */}
             <div className="flex items-center gap-2">
-              <span className="text-2xl md:text-3xl font-black italic text-[#1a2744] tracking-tight">Fresh Fleet</span>
+              <span className="headline-display text-2xl md:text-3xl text-teal-600 tracking-wide">Fresh Fleet</span>
             </div>
 
             {/* Right nav */}
-            <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide uppercase text-[#1a2744]">
-              <a href="#how-it-works" className="hover:text-teal-600 transition-colors">How It Works</a>
-              <a href="#contact" className="bg-teal-600 text-white px-5 py-2.5 rounded hover:bg-teal-700 transition-colors">
-                Get a Quote!
+            <div className="hidden md:flex items-center gap-8 headline-display text-sm tracking-widest text-[#1a2744]">
+              <a href="#como-funciona" className="nav-link hover:text-teal-600 transition-colors">Cómo Funciona</a>
+              <a href="#contacto" className="bg-teal-600 text-white px-5 py-2.5 rounded-full hover:bg-teal-700 transition-colors">
+                Cotizar!
               </a>
             </div>
 
@@ -81,7 +81,7 @@ export default function Home() {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="/hero-image.png"
-                alt="Fresh Fleet delivery van with organized linens"
+                alt="Camioneta Fresh Fleet con ropa organizada"
                 width={800}
                 height={600}
                 className="w-full h-auto object-cover"
@@ -91,23 +91,23 @@ export default function Home() {
 
             {/* Hero Content */}
             <div className="lg:pl-8 py-8">
-              <h1 className="headline-display text-5xl md:text-6xl lg:text-7xl text-[#1a2744] mb-6">
-                Clean It<br />
-                <span className="text-teal-600">Fresh & Fast</span>
+              <h1 className="headline-retro-lg text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight">
+                Limpio,<br />
+                <span className="headline-retro-teal">Fresco y Rápido</span>
               </h1>
               <div className="space-y-4 text-lg text-[#4a5568] mb-8 max-w-lg">
                 <p>
-                  Fresh Fleet is founded on the idea of world-class laundry service at a fair price. We aim to make busy lives easier—and hopefully give you back some precious time along the way.
+                  Fresh Fleet nace de la idea de ofrecer un servicio de lavandería de clase mundial a un precio justo. Nuestro objetivo es hacer tu vida más fácil—y devolverte algo de tiempo precioso.
                 </p>
                 <p>
-                  We take pride in our work, no matter the load. Whether we're handling your weekly laundry, pressing linens for your event, or managing bulk orders for your hotel, we treat your items with the utmost care.
+                  Nos enorgullecemos de nuestro trabajo, sin importar la carga. Ya sea que manejemos tu ropa semanal, planchemos manteles para tu evento, o procesemos pedidos en volumen para tu hotel, tratamos tus artículos con el máximo cuidado.
                 </p>
               </div>
               <a
-                href="#contact"
-                className="inline-block bg-[#1a2744] text-white px-8 py-4 rounded text-lg font-semibold hover:bg-[#2d3a52] transition-colors"
+                href="#contacto"
+                className="inline-block bg-[#1a2744] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#2d3a52] transition-colors headline-display tracking-wider"
               >
-                Quote Within 24 Hours
+                Cotización en 24 Horas
               </a>
             </div>
           </div>
@@ -121,26 +121,26 @@ export default function Home() {
             {[
               {
                 icon: <ClockIcon />,
-                title: "Quick & Easy Quotes",
-                desc: "We offer free quotes on all orders. Call or text and we'll provide a fair quote within 24 hours and schedule a convenient pickup time."
+                title: "Cotizaciones Rápidas",
+                desc: "Ofrecemos cotizaciones gratis en todos los pedidos. Llama o escríbenos y te daremos un precio justo en 24 horas."
               },
               {
                 icon: <ShieldIcon />,
-                title: "We're Insured",
-                desc: "No need to worry! We're fully covered with comprehensive liability insurance protecting your items throughout the entire process."
+                title: "Estamos Asegurados",
+                desc: "¡No te preocupes! Contamos con seguro de responsabilidad civil que protege tus artículos durante todo el proceso."
               },
               {
                 icon: <TruckIcon />,
-                title: "We're Reliable",
-                desc: "We understand time is valuable. We provide fixed pickup and delivery windows—not vague time frames. If you're not satisfied, we'll make it right."
+                title: "Somos Confiables",
+                desc: "Entendemos que tu tiempo es valioso. Damos ventanas de recolección y entrega fijas—no rangos vagos."
               },
               {
                 icon: <SparkleIcon />,
-                title: "Respect Your Items",
-                desc: "The 'treat it like our own' principle is what we live by. Every item is sorted, tagged, and handled with care from pickup to delivery."
+                title: "Respetamos Tus Cosas",
+                desc: "El principio de 'tratarlo como propio' es nuestra filosofía. Cada artículo se clasifica, etiqueta y maneja con cuidado."
               }
             ].map((feature, idx) => (
-              <div key={idx} className="bg-[#faf8f5] rounded-xl p-6">
+              <div key={idx} className="bg-[#faf8f5] rounded-xl p-6 hover:shadow-lg transition-shadow">
                 <div className="text-teal-600 mb-4">
                   {feature.icon}
                 </div>
@@ -163,44 +163,44 @@ export default function Home() {
           />
         </div>
         <div className="relative max-w-4xl mx-auto text-center">
-          <h2 className="headline-display text-4xl md:text-5xl lg:text-6xl text-white mb-8">
-            We believe in bringing back<br />
-            the lost art of <span className="text-teal-400">great service...</span>
+          <h2 className="headline-retro-lg text-4xl md:text-5xl lg:text-6xl mb-8 leading-tight" style={{ WebkitTextStroke: '3px white', color: 'transparent' }}>
+            Creemos en Rescatar<br />
+            el Arte Perdido del <span className="headline-retro-teal">Buen Servicio...</span>
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#services" className="inline-block border-2 border-white text-white px-8 py-3 rounded hover:bg-white hover:text-[#1a2744] transition-colors font-semibold">
-              Our Services
+            <a href="#servicios" className="inline-block border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1a2744] transition-colors headline-display tracking-wider">
+              Nuestros Servicios
             </a>
-            <a href="#business" className="inline-block border-2 border-teal-400 text-teal-400 px-8 py-3 rounded hover:bg-teal-400 hover:text-[#1a2744] transition-colors font-semibold">
-              For Business
+            <a href="#empresas" className="inline-block border-2 border-teal-400 text-teal-400 px-8 py-3 rounded-full hover:bg-teal-400 hover:text-[#1a2744] transition-colors headline-display tracking-wider">
+              Para Empresas
             </a>
           </div>
         </div>
       </section>
 
       {/* Services Section - B2C & B2B */}
-      <section id="services" className="py-20 px-6 lg:px-8">
+      <section id="servicios" className="py-20 px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="headline-display text-4xl md:text-5xl text-[#1a2744] mb-4">
-              Two Ways We <span className="text-teal-600">Serve You</span>
+            <h2 className="headline-retro text-4xl md:text-5xl mb-4">
+              Dos Formas de <span className="headline-retro-teal">Servirte</span>
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Personal Service */}
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-[#e2e8f0]">
-              <span className="inline-block bg-teal-100 text-teal-700 px-4 py-1 rounded-full text-sm font-semibold mb-6">
-                For You & Your Family
+              <span className="inline-block bg-teal-100 text-teal-700 px-4 py-1 rounded-full text-sm font-semibold mb-6 headline-display tracking-wider">
+                Para Ti y Tu Familia
               </span>
-              <h3 className="headline-display text-3xl text-[#1a2744] mb-4">Pickup & Delivery</h3>
+              <h3 className="headline-display text-3xl text-[#1a2744] mb-4">Recolección y Entrega</h3>
               <p className="text-[#4a5568] mb-6">
-                Schedule a pickup, and we'll wash, dry, fold, and deliver back to your door. It's laundry day without the laundry.
+                Agenda una recolección y nosotros lavamos, secamos, doblamos y entregamos en tu puerta. Es día de lavandería sin la lavandería.
               </p>
               <ul className="space-y-3 mb-8">
-                {["Free pickup & delivery", "24-hour turnaround available", "Wash, dry & fold included", "Special care for delicates"].map((item, idx) => (
+                {["Recolección y entrega gratis", "Entrega en 24 horas disponible", "Lavado, secado y doblado incluido", "Cuidado especial para delicados"].map((item, idx) => (
                   <li key={idx} className="flex items-center gap-3 text-[#1a2744]">
-                    <svg className="w-5 h-5 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="w-5 h-5 text-teal-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                     {item}
@@ -208,27 +208,27 @@ export default function Home() {
                 ))}
               </ul>
               <div className="flex items-baseline gap-2 mb-6">
-                <span className="text-4xl font-bold text-[#1a2744]">$1.75</span>
-                <span className="text-[#718096]">per lb</span>
+                <span className="text-4xl font-bold text-[#1a2744]">$35</span>
+                <span className="text-[#718096]">MXN por kg</span>
               </div>
-              <a href="#contact" className="block w-full text-center bg-teal-600 text-white py-4 rounded-lg font-semibold hover:bg-teal-700 transition-colors">
-                Schedule Your First Pickup
+              <a href="#contacto" className="block w-full text-center bg-teal-600 text-white py-4 rounded-full font-semibold hover:bg-teal-700 transition-colors headline-display tracking-wider">
+                Agenda Tu Primera Recolección
               </a>
             </div>
 
             {/* Business Service */}
             <div className="bg-[#1a2744] rounded-2xl p-8 shadow-lg text-white">
-              <span className="inline-block bg-teal-400/20 text-teal-300 px-4 py-1 rounded-full text-sm font-semibold mb-6">
-                For Business
+              <span className="inline-block bg-teal-400/20 text-teal-300 px-4 py-1 rounded-full text-sm font-semibold mb-6 headline-display tracking-wider">
+                Para Empresas
               </span>
-              <h3 className="headline-display text-3xl mb-4">Commercial Services</h3>
+              <h3 className="headline-display text-3xl mb-4">Servicios Comerciales</h3>
               <p className="text-slate-300 mb-6">
-                Industrial-capacity processing for hotels, restaurants, event companies, gyms, and spas. Volume pricing with dedicated account management.
+                Procesamiento de capacidad industrial para hoteles, restaurantes, empresas de eventos, gimnasios y spas. Precios por volumen con atención personalizada.
               </p>
               <ul className="space-y-3 mb-8">
-                {["80 lb commercial machines", "Professional pressing & ironing", "Recurring pickup schedules", "Net-30 billing available"].map((item, idx) => (
+                {["Máquinas comerciales de 30-40 kg", "Planchado profesional", "Recolecciones programadas", "Facturación a 30 días disponible"].map((item, idx) => (
                   <li key={idx} className="flex items-center gap-3 text-slate-200">
-                    <svg className="w-5 h-5 text-teal-400" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="w-5 h-5 text-teal-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                     {item}
@@ -236,11 +236,11 @@ export default function Home() {
                 ))}
               </ul>
               <div className="flex items-baseline gap-2 mb-6">
-                <span className="text-4xl font-bold">Custom</span>
-                <span className="text-slate-400">pricing for volume</span>
+                <span className="text-4xl font-bold">Precios</span>
+                <span className="text-slate-400">personalizados por volumen</span>
               </div>
-              <a href="#contact" className="block w-full text-center bg-teal-400 text-[#1a2744] py-4 rounded-lg font-semibold hover:bg-teal-300 transition-colors">
-                Request a Quote
+              <a href="#contacto" className="block w-full text-center bg-teal-400 text-[#1a2744] py-4 rounded-full font-semibold hover:bg-teal-300 transition-colors headline-display tracking-wider">
+                Solicitar Cotización
               </a>
             </div>
           </div>
@@ -253,22 +253,22 @@ export default function Home() {
           <div className="text-center mb-16">
             <div className="inline-block mb-4">
               <div className="w-20 h-20 mx-auto bg-teal-600 rounded-full flex items-center justify-center">
-                <span className="text-white text-3xl font-black italic">FF</span>
+                <span className="text-white headline-display text-2xl">FF</span>
               </div>
             </div>
-            <h2 className="headline-display text-4xl md:text-5xl text-[#1a2744] mb-4">
-              The Fresh Fleet<br /><span className="text-teal-600">Promise</span>
+            <h2 className="headline-retro text-4xl md:text-5xl mb-4">
+              La Promesa<br /><span className="headline-retro-teal">Fresh Fleet</span>
             </h2>
             <p className="text-lg text-[#4a5568] italic">
-              "Your time should never be taken for granted. That's why we'll always:"
+              "Tu tiempo nunca debe darse por sentado. Por eso siempre vamos a:"
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { num: ".01", text: "Pick up on time (which really means we'll be there when we say we will)." },
-              { num: ".02", text: "Do what we say we're going to do. Our word is everything, and we aim to exceed expectations." },
-              { num: ".03", text: "Return your items cleaner, fresher, and better than before." }
+              { num: ".01", text: "Recoger a tiempo (lo que significa que estaremos ahí cuando dijimos que llegaríamos)." },
+              { num: ".02", text: "Hacer lo que dijimos que haríamos. Nuestra palabra lo es todo, y buscamos superar expectativas." },
+              { num: ".03", text: "Devolver tus artículos más limpios, frescos y mejor que antes." }
             ].map((promise, idx) => (
               <div key={idx} className="text-center">
                 <span className="headline-display text-5xl text-teal-600 block mb-4">{promise.num}</span>
@@ -280,26 +280,26 @@ export default function Home() {
       </section>
 
       {/* Business Pricing Section */}
-      <section id="business" className="py-20 px-6 lg:px-8">
+      <section id="empresas" className="py-20 px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="inline-block bg-[#1a2744] text-white px-4 py-1 rounded-full text-sm font-semibold mb-6 uppercase tracking-wide">
-                Built for Business
+              <span className="inline-block bg-[#1a2744] text-white px-4 py-1 rounded-full text-sm font-semibold mb-6 headline-display tracking-wider">
+                Hecho para Negocios
               </span>
-              <h2 className="headline-display text-4xl md:text-5xl text-[#1a2744] mb-6">
-                Industrial Capacity<br />
-                <span className="text-teal-600">for Your Needs</span>
+              <h2 className="headline-retro text-4xl md:text-5xl mb-6">
+                Capacidad Industrial<br />
+                <span className="headline-retro-teal">Para Tus Necesidades</span>
               </h2>
               <p className="text-lg text-[#4a5568] mb-8">
-                Our 60-80 lb commercial machines process what takes competitors 8 loads in just 55 minutes. Perfect for event companies, hotels, restaurants, and fitness facilities.
+                Nuestras máquinas comerciales de 30-40 kg procesan en 55 minutos lo que a la competencia le toma 8 cargas. Perfecto para empresas de eventos, hoteles, restaurantes e instalaciones deportivas.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { title: "Event Companies", desc: "Tablecloths, napkins, linens" },
-                  { title: "Hotels & B&Bs", desc: "Sheets, towels, bedding" },
-                  { title: "Restaurants", desc: "Table linens, uniforms" },
-                  { title: "Gyms & Spas", desc: "High-volume towels" }
+                  { title: "Empresas de Eventos", desc: "Manteles, servilletas, blancos" },
+                  { title: "Hoteles y B&Bs", desc: "Sábanas, toallas, ropa de cama" },
+                  { title: "Restaurantes", desc: "Mantelería, uniformes" },
+                  { title: "Gimnasios y Spas", desc: "Toallas en alto volumen" }
                 ].map((item, idx) => (
                   <div key={idx} className="bg-[#f0ebe3] rounded-lg p-4">
                     <h4 className="font-bold text-[#1a2744] mb-1">{item.title}</h4>
@@ -311,12 +311,12 @@ export default function Home() {
 
             {/* Pricing Cards */}
             <div className="bg-white rounded-2xl p-8 shadow-xl border border-[#e2e8f0]">
-              <h3 className="headline-display text-2xl text-[#1a2744] mb-6">Monthly Contract Options</h3>
+              <h3 className="headline-display text-2xl text-[#1a2744] mb-6">Opciones de Contrato Mensual</h3>
               <div className="space-y-4">
                 {[
-                  { name: "Bronze", price: "$800", features: "Up to 500 lbs/week • 2x weekly • 48hr", popular: false },
-                  { name: "Silver", price: "$1,400", features: "Up to 1,000 lbs/week • 3x weekly • 24hr", popular: true },
-                  { name: "Gold", price: "$2,500", features: "Up to 2,000 lbs/week • Daily • Same-day", popular: false }
+                  { name: "Bronce", price: "$15,000", features: "Hasta 200 kg/semana • 2x semanal • 48hrs", popular: false },
+                  { name: "Plata", price: "$28,000", features: "Hasta 400 kg/semana • 3x semanal • 24hrs", popular: true },
+                  { name: "Oro", price: "$50,000", features: "Hasta 800 kg/semana • Diario • Mismo día", popular: false }
                 ].map((tier, idx) => (
                   <div
                     key={idx}
@@ -326,39 +326,44 @@ export default function Home() {
                   >
                     <div className="flex justify-between items-center mb-2">
                       <span className="font-bold text-lg text-[#1a2744]">{tier.name}</span>
-                      <span className="text-2xl font-bold text-teal-600">{tier.price}<span className="text-sm text-[#718096] font-normal">/mo</span></span>
+                      <span className="text-2xl font-bold text-teal-600">{tier.price}<span className="text-sm text-[#718096] font-normal">/mes</span></span>
                     </div>
                     <p className="text-sm text-[#4a5568]">{tier.features}</p>
-                    {tier.popular && <span className="inline-block mt-2 text-xs font-semibold text-teal-700 uppercase">Most Popular</span>}
+                    {tier.popular && <span className="inline-block mt-2 text-xs font-semibold text-teal-700 uppercase headline-display tracking-wider">Más Popular</span>}
                   </div>
                 ))}
               </div>
-              <a href="#contact" className="mt-6 block w-full text-center bg-[#1a2744] text-white py-4 rounded-lg font-semibold hover:bg-[#2d3a52] transition-colors">
-                Discuss Your Needs
+              <a href="#contacto" className="mt-6 block w-full text-center bg-[#1a2744] text-white py-4 rounded-full font-semibold hover:bg-[#2d3a52] transition-colors headline-display tracking-wider">
+                Platiquemos de Tus Necesidades
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Testimonials - Pink's carousel style */}
+      {/* Testimonials - Pink's style */}
       <section className="py-20 px-6 lg:px-8 bg-[#1a2744]">
         <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="headline-retro-lg text-3xl md:text-4xl" style={{ WebkitTextStroke: '2px white', color: 'transparent' }}>
+              Lo Que Dicen Nuestros Clientes
+            </h2>
+          </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                name: "Maria S.",
-                text: "Fresh Fleet has been a game-changer for our family! With two kids and busy jobs, laundry was always piling up. Now it just... disappears and comes back fresh. The team is professional and friendly.",
+                name: "María S.",
+                text: "¡Fresh Fleet ha sido un cambio total para nuestra familia! Con dos hijos y trabajos demandantes, la ropa siempre se acumulaba. Ahora simplemente... desaparece y regresa fresca.",
                 rating: 5
               },
               {
                 name: "David L.",
-                text: "As an event planner, I need reliable linen service. Fresh Fleet delivers—literally. Perfectly pressed tablecloths, on time, every time. Their commercial pressing service is top-notch.",
+                text: "Como organizador de eventos, necesito un servicio de blancos confiable. Fresh Fleet cumple—literalmente. Manteles perfectamente planchados, a tiempo, siempre.",
                 rating: 5
               },
               {
                 name: "Jennifer K.",
-                text: "We switched our boutique hotel's laundry to Fresh Fleet six months ago. The quality is consistently excellent, and their 24-hour turnaround has saved us during busy seasons. Highly recommend!",
+                text: "Cambiamos la lavandería de nuestro hotel boutique a Fresh Fleet hace seis meses. La calidad es consistentemente excelente y su entrega en 24 horas nos ha salvado.",
                 rating: 5
               }
             ].map((testimonial, idx) => (
@@ -377,24 +382,24 @@ export default function Home() {
       </section>
 
       {/* How It Works */}
-      <section id="how-it-works" className="py-20 px-6 lg:px-8">
+      <section id="como-funciona" className="py-20 px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="headline-display text-4xl md:text-5xl text-[#1a2744] mb-4">
-            How It <span className="text-teal-600">Works</span>
+          <h2 className="headline-retro text-4xl md:text-5xl mb-4">
+            Cómo <span className="headline-retro-teal">Funciona</span>
           </h2>
-          <p className="text-lg text-[#4a5568] mb-12">Simple as 1-2-3. We handle the hard part.</p>
+          <p className="text-lg text-[#4a5568] mb-12">Fácil como 1-2-3. Nosotros hacemos lo difícil.</p>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { num: "1", title: "Schedule Pickup", desc: "Book online or call us. Choose a time that works for you." },
-              { num: "2", title: "We Collect & Clean", desc: "Our team picks up, processes at our industrial facility, and quality checks every item." },
-              { num: "3", title: "Fresh Delivery", desc: "Clean, folded, and delivered back to your door—usually within 24 hours." }
+              { num: "1", title: "Agenda Recolección", desc: "Reserva en línea o llámanos. Elige el horario que te funcione." },
+              { num: "2", title: "Recolectamos y Lavamos", desc: "Nuestro equipo recoge, procesa en nuestra instalación industrial, y revisa la calidad de cada artículo." },
+              { num: "3", title: "Entrega Fresca", desc: "Limpio, doblado y entregado en tu puerta—generalmente en 24 horas." }
             ].map((step, idx) => (
               <div key={idx}>
                 <div className="w-16 h-16 mx-auto mb-4 bg-teal-600 rounded-full flex items-center justify-center">
-                  <span className="text-white text-2xl font-bold">{step.num}</span>
+                  <span className="text-white headline-display text-2xl">{step.num}</span>
                 </div>
-                <h3 className="font-bold text-xl text-[#1a2744] mb-2">{step.title}</h3>
+                <h3 className="headline-display text-xl text-[#1a2744] mb-2">{step.title}</h3>
                 <p className="text-[#4a5568]">{step.desc}</p>
               </div>
             ))}
@@ -403,14 +408,14 @@ export default function Home() {
       </section>
 
       {/* Contact Form */}
-      <section id="contact" className="py-20 px-6 lg:px-8 bg-[#f0ebe3]">
+      <section id="contacto" className="py-20 px-6 lg:px-8 bg-[#f0ebe3]">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="headline-display text-4xl md:text-5xl text-[#1a2744] mb-4">
-              Let's Get <span className="text-teal-600">Started</span>
+            <h2 className="headline-retro text-4xl md:text-5xl mb-4">
+              Vamos a <span className="headline-retro-teal">Empezar</span>
             </h2>
             <p className="text-lg text-[#4a5568]">
-              Ready to reclaim your time? Tell us about your laundry needs.
+              ¿Listo para recuperar tu tiempo? Cuéntanos sobre tus necesidades de lavandería.
             </p>
           </div>
 
@@ -418,75 +423,75 @@ export default function Home() {
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-[#1a2744] mb-2">Your Name</label>
+                  <label htmlFor="name" className="block text-sm font-semibold text-[#1a2744] mb-2">Tu Nombre</label>
                   <input
                     type="text"
                     id="name"
                     name="name"
                     className="w-full px-4 py-3 rounded-lg border border-[#e2e8f0] focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none bg-[#faf8f5]"
-                    placeholder="John Smith"
+                    placeholder="Juan Pérez"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-[#1a2744] mb-2">Email</label>
+                  <label htmlFor="email" className="block text-sm font-semibold text-[#1a2744] mb-2">Correo Electrónico</label>
                   <input
                     type="email"
                     id="email"
                     name="email"
                     className="w-full px-4 py-3 rounded-lg border border-[#e2e8f0] focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none bg-[#faf8f5]"
-                    placeholder="john@example.com"
+                    placeholder="juan@ejemplo.com"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-sm font-semibold text-[#1a2744] mb-2">Phone</label>
+                <label htmlFor="phone" className="block text-sm font-semibold text-[#1a2744] mb-2">Teléfono</label>
                 <input
                   type="tel"
                   id="phone"
                   name="phone"
                   className="w-full px-4 py-3 rounded-lg border border-[#e2e8f0] focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none bg-[#faf8f5]"
-                  placeholder="(555) 123-4567"
+                  placeholder="(55) 1234-5678"
                 />
               </div>
 
               <div>
-                <label htmlFor="type" className="block text-sm font-semibold text-[#1a2744] mb-2">I'm interested in...</label>
+                <label htmlFor="type" className="block text-sm font-semibold text-[#1a2744] mb-2">Me interesa...</label>
                 <select
                   id="type"
                   name="type"
                   className="w-full px-4 py-3 rounded-lg border border-[#e2e8f0] focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none bg-[#faf8f5]"
                 >
-                  <option value="">Select an option</option>
-                  <option value="personal">Personal Pickup & Delivery</option>
-                  <option value="event">Event Company Services</option>
-                  <option value="hotel">Hotel / B&B Services</option>
-                  <option value="restaurant">Restaurant Services</option>
-                  <option value="gym">Gym / Spa Services</option>
-                  <option value="other">Other Business Needs</option>
+                  <option value="">Selecciona una opción</option>
+                  <option value="personal">Recolección y Entrega Personal</option>
+                  <option value="event">Servicios para Eventos</option>
+                  <option value="hotel">Servicios para Hotel / B&B</option>
+                  <option value="restaurant">Servicios para Restaurante</option>
+                  <option value="gym">Servicios para Gimnasio / Spa</option>
+                  <option value="other">Otras Necesidades Comerciales</option>
                 </select>
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-[#1a2744] mb-2">Tell us more (optional)</label>
+                <label htmlFor="message" className="block text-sm font-semibold text-[#1a2744] mb-2">Cuéntanos más (opcional)</label>
                 <textarea
                   id="message"
                   name="message"
                   rows={4}
                   className="w-full px-4 py-3 rounded-lg border border-[#e2e8f0] focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none bg-[#faf8f5] resize-none"
-                  placeholder="Estimated volume, special requirements, questions..."
+                  placeholder="Volumen estimado, requerimientos especiales, preguntas..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full py-4 rounded-lg bg-teal-600 text-white font-semibold text-lg hover:bg-teal-700 transition-colors"
+                className="w-full py-4 rounded-full bg-teal-600 text-white font-semibold text-lg hover:bg-teal-700 transition-colors headline-display tracking-wider"
               >
-                Get My Free Quote
+                Obtener Mi Cotización Gratis
               </button>
 
               <p className="text-center text-sm text-[#718096]">
-                We'll respond within 24 hours.
+                Respondemos en menos de 24 horas.
               </p>
             </form>
           </div>
@@ -500,39 +505,39 @@ export default function Home() {
             {/* Logo & Quote CTA */}
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <span className="text-2xl font-black italic text-teal-400">Fresh Fleet</span>
+                <span className="headline-display text-2xl text-teal-400">Fresh Fleet</span>
               </div>
-              <p className="text-slate-400 mb-2">Within 24 hours</p>
+              <p className="text-slate-400 mb-2">Respuesta en 24 horas</p>
             </div>
 
             {/* Links */}
             <div className="flex gap-12">
               <div>
                 <ul className="space-y-2 text-sm">
-                  <li><a href="#services" className="text-slate-400 hover:text-white transition-colors">Services</a></li>
-                  <li><a href="#business" className="text-slate-400 hover:text-white transition-colors">Business</a></li>
-                  <li><a href="#how-it-works" className="text-slate-400 hover:text-white transition-colors">How It Works</a></li>
+                  <li><a href="#servicios" className="text-slate-400 hover:text-white transition-colors">Servicios</a></li>
+                  <li><a href="#empresas" className="text-slate-400 hover:text-white transition-colors">Empresas</a></li>
+                  <li><a href="#como-funciona" className="text-slate-400 hover:text-white transition-colors">Cómo Funciona</a></li>
                 </ul>
               </div>
               <div>
                 <ul className="space-y-2 text-sm">
-                  <li><a href="#contact" className="text-slate-400 hover:text-white transition-colors">Get a Quote</a></li>
-                  <li><span className="text-slate-400">hello@freshfleet.com</span></li>
-                  <li><span className="text-slate-400">(555) 123-4567</span></li>
+                  <li><a href="#contacto" className="text-slate-400 hover:text-white transition-colors">Cotizar</a></li>
+                  <li><span className="text-slate-400">hola@freshfleet.mx</span></li>
+                  <li><span className="text-slate-400">(55) 1234-5678</span></li>
                 </ul>
               </div>
             </div>
 
             {/* CTA Button */}
             <div className="flex justify-end items-start">
-              <a href="#contact" className="bg-teal-600 text-white px-6 py-3 rounded font-semibold hover:bg-teal-700 transition-colors">
-                Get a Quote!
+              <a href="#contacto" className="bg-teal-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-teal-700 transition-colors headline-display tracking-wider">
+                Cotizar!
               </a>
             </div>
           </div>
 
           <div className="border-t border-slate-700 pt-8 text-center text-slate-500 text-sm">
-            © {new Date().getFullYear()} Fresh Fleet. All Rights Reserved.
+            © {new Date().getFullYear()} Fresh Fleet. Todos los Derechos Reservados.
           </div>
         </div>
       </footer>

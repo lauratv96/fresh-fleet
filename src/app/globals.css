@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #faf8f5; /* Cream/off-white like Pink's */
-  --foreground: #1a2744; /* Navy blue */
+  --background: #faf8f5;
+  --foreground: #1a2744;
 
   /* Fresh Fleet Brand Colors - Navy + Teal (like Pink's Navy + Pink) */
   --navy: #1a2744;
@@ -11,56 +11,108 @@
   --teal-light: #14b8a6;
   --cream: #faf8f5;
   --cream-dark: #f0ebe3;
-
-  /* Text colors */
-  --text-primary: #1a2744;
-  --text-secondary: #4a5568;
-  --text-muted: #718096;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-navy: var(--navy);
-  --color-navy-light: var(--navy-light);
-  --color-teal: var(--teal);
-  --color-teal-light: var(--teal-light);
-  --color-cream: var(--cream);
-  --color-cream-dark: var(--cream-dark);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-family: var(--font-body), system-ui, sans-serif;
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Display headline style like Pink's */
-.headline-display {
-  font-weight: 800;
+/* Retro 50s Display Headlines - Bebas Neue with text-stroke effect */
+.font-display {
+  font-family: var(--font-display), system-ui, sans-serif;
   text-transform: uppercase;
-  letter-spacing: -0.02em;
-  line-height: 0.95;
+  letter-spacing: 0.02em;
 }
 
-/* Scrolling marquee animation */
-@keyframes scroll-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+/* Pink's Windows style headline - white fill with colored outline */
+.headline-retro {
+  font-family: var(--font-display), system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: white;
+  -webkit-text-stroke: 2px var(--navy);
+  text-stroke: 2px var(--navy);
+  paint-order: stroke fill;
 }
 
-.animate-scroll-left {
-  animation: scroll-left 30s linear infinite;
+/* Larger stroke for bigger text */
+.headline-retro-lg {
+  font-family: var(--font-display), system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: white;
+  -webkit-text-stroke: 3px var(--navy);
+  text-stroke: 3px var(--navy);
+  paint-order: stroke fill;
 }
 
-/* Star rating */
-.star-filled {
-  color: #f59e0b;
+/* Teal accent version */
+.headline-retro-teal {
+  font-family: var(--font-display), system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: white;
+  -webkit-text-stroke: 2px var(--teal);
+  text-stroke: 2px var(--teal);
+  paint-order: stroke fill;
+}
+
+/* Solid display for when we don't want outline effect */
+.headline-display {
+  font-family: var(--font-display), system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--teal) 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Float animation for hero */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Smooth hover transitions */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--teal);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }

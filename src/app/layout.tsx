@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Bebas_Neue, DM_Sans } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,23 +12,37 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// DM Sans for body text - clean and modern
+const dmSans = DM_Sans({
+  variable: "--font-body",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+// Bebas Neue - classic retro condensed display font (like Pink's Windows)
+const bebasNeue = Bebas_Neue({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: "400",
+});
+
 export const metadata: Metadata = {
-  title: "Fresh Fleet | Industrial Laundry & Pickup/Delivery Service",
+  title: "Fresh Fleet | Lavandería Industrial y Servicio de Recolección",
   description:
-    "Industrial-scale laundry facility serving businesses and busy families. 8x faster processing with 60-80 lb commercial equipment. Professional pressing for events, convenient pickup & delivery for homes.",
+    "Instalación de lavandería a escala industrial que sirve a empresas y familias ocupadas. Procesamiento 8x más rápido con equipos comerciales de 60-80 lb. Planchado profesional para eventos, recolección y entrega conveniente.",
   keywords: [
-    "commercial laundry",
-    "laundry pickup delivery",
-    "event linen service",
-    "hotel laundry",
-    "restaurant laundry",
-    "industrial laundry",
-    "linen pressing",
+    "lavandería comercial",
+    "recolección entrega lavandería",
+    "servicio de mantelería eventos",
+    "lavandería hoteles",
+    "lavandería restaurantes",
+    "lavandería industrial",
+    "planchado de manteles",
   ],
   openGraph: {
-    title: "Fresh Fleet | Industrial Laundry & Pickup/Delivery Service",
+    title: "Fresh Fleet | Lavandería Industrial y Servicio de Recolección",
     description:
-      "Industrial-scale laundry facility serving businesses and busy families. 8x faster processing.",
+      "Instalación de lavandería a escala industrial. Procesamiento 8x más rápido.",
     type: "website",
   },
 };
@@ -39,9 +53,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} ${dmSans.variable} antialiased`}
       >
         {children}
       </body>
