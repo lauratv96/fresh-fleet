@@ -520,7 +520,8 @@ export default function Home() {
           </div>
 
           <div className="border-t border-slate-700 pt-8 text-center text-slate-500 text-sm">
-            © {new Date().getFullYear()} Fresh Fleet. Todos los derechos reservados.
+            <p>© {new Date().getFullYear()} Fresh Fleet. Todos los derechos reservados.</p>
+            <p className="font-script text-teal-400 mt-2">Hecho con amor en Puerto Rico</p>
           </div>
         </div>
       </footer>
