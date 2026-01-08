@@ -1,42 +1,34 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #faf8f5; /* Cream/off-white like Pink's */
+  --foreground: #1a2744; /* Navy blue */
 
-  /* Fresh Fleet Brand Colors */
-  --primary: #0d9488; /* Teal - fresh, clean, trustworthy */
-  --primary-light: #14b8a6;
-  --primary-dark: #0f766e;
-  --accent: #06b6d4; /* Cyan accent for highlights */
-  --accent-light: #22d3ee;
+  /* Fresh Fleet Brand Colors - Navy + Teal (like Pink's Navy + Pink) */
+  --navy: #1a2744;
+  --navy-light: #2d3a52;
+  --teal: #0d9488;
+  --teal-light: #14b8a6;
+  --cream: #faf8f5;
+  --cream-dark: #f0ebe3;
 
-  /* Neutral tones */
-  --slate-50: #f8fafc;
-  --slate-100: #f1f5f9;
-  --slate-200: #e2e8f0;
-  --slate-600: #475569;
-  --slate-800: #1e293b;
-  --slate-900: #0f172a;
+  /* Text colors */
+  --text-primary: #1a2744;
+  --text-secondary: #4a5568;
+  --text-muted: #718096;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
-  --color-primary-light: var(--primary-light);
-  --color-primary-dark: var(--primary-dark);
-  --color-accent: var(--accent);
-  --color-accent-light: var(--accent-light);
+  --color-navy: var(--navy);
+  --color-navy-light: var(--navy-light);
+  --color-teal: var(--teal);
+  --color-teal-light: var(--teal-light);
+  --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0f172a;
-    --foreground: #f8fafc;
-  }
 }
 
 body {
@@ -50,20 +42,25 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom animation for hero */
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+/* Display headline style like Pink's */
+.headline-display {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
 }
 
-.animate-float {
-  animation: float 3s ease-in-out infinite;
+/* Scrolling marquee animation */
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-/* Gradient text utility */
-.gradient-text {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.animate-scroll-left {
+  animation: scroll-left 30s linear infinite;
+}
+
+/* Star rating */
+.star-filled {
+  color: #f59e0b;
 }
