@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="#1a2744" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Basket body with woven pattern -->
+  <path d="M12 28c0 0 2 20 8 22h24c6-2 8-22 8-22" />
+  <path d="M10 28h44" />
+  <!-- Woven horizontal lines -->
+  <path d="M14 34h36" />
+  <path d="M15 40h34" />
+  <path d="M17 46h30" />
+  <!-- Woven vertical lines -->
+  <path d="M20 28v20" />
+  <path d="M28 28v21" />
+  <path d="M36 28v21" />
+  <path d="M44 28v20" />
+  <!-- Clothes peeking out -->
+  <path d="M18 28c-2-4 0-10 6-12s10 2 12 6" />
+  <path d="M32 22c2-6 8-8 12-6s6 6 4 12" />
+  <path d="M26 18c0-4 4-8 8-6" />
+</svg>

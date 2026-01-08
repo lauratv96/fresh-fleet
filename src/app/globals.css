@@ -1,30 +1,42 @@
 @import "tailwindcss";
 
-:root {
-  --background: #faf8f5;
-  --foreground: #1a2744;
+/* ==============================================
+   FRESH FLEET DESIGN SYSTEM: "Editorial Warmth"
+   Sophisticated, indie, authentic — NOT retro diner
+   ============================================== */
 
-  /* Fresh Fleet Brand Colors - Warm neighborhood palette */
+:root {
+  /* Navy Scale - Primary brand color */
   --navy: #1a2744;
   --navy-light: #2d3a52;
-  --teal: #0d9488;
-  --teal-light: #14b8a6;
-  --cream: #faf8f5;
-  --cream-dark: #f0ebe3;
+  --navy-muted: #4a5568;
+  --navy-faded: #718096;
 
-  /* Warm accent colors */
-  --warm-gray: #64748b;
-  --warm-brown: #78716c;
+  /* Backgrounds - Warm cream palette */
+  --cream: #faf8f5;
+  --cream-warm: #f5f2ed;
+  --white: #ffffff;
+
+  /* Accent - Terracotta (replaces coral) */
+  --accent: #c4785a;
+  --accent-dark: #a66248;
+  --accent-light: #d4917a;
+  --accent-bg: #fdf8f6;
+
+  /* Borders - Subtle, editorial */
+  --border: #e8e4df;
+  --border-dark: #d4cfc7;
+
+  /* Semantic aliases */
+  --background: var(--cream);
+  --foreground: var(--navy);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-display: var(--font-display);
+  --font-headline: var(--font-headline);
   --font-body: var(--font-body);
-  --font-script: var(--font-script);
 }
 
 body {
@@ -37,104 +49,788 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Slab Serif Headlines - sturdy and trustworthy */
-.font-display {
-  font-family: var(--font-display), Georgia, serif;
-  font-weight: 700;
-}
+/* ==============================================
+   TYPOGRAPHY - Editorial, Sophisticated
+   ============================================== */
 
-/* Headline styles - warm and inviting */
-.headline-display {
-  font-family: var(--font-display), Georgia, serif;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-}
-
-/* Large warm headlines */
-.headline-warm {
-  font-family: var(--font-display), Georgia, serif;
-  font-weight: 800;
-  letter-spacing: -0.02em;
+/* Headline - DM Serif Display (chunky, characterful) */
+.headline-hero {
+  font-family: var(--font-headline), Georgia, serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 400;
   line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--navy);
 }
 
-/* Casual script for accents - diner menu vibe */
-.font-script {
-  font-family: var(--font-script), cursive;
-  font-weight: 500;
+.headline-section {
+  font-family: var(--font-headline), Georgia, serif;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: var(--navy);
 }
 
-/* Script tagline style */
-.tagline-script {
-  font-family: var(--font-script), cursive;
-  font-weight: 600;
-  font-size: 1.5em;
+.headline-card {
+  font-family: var(--font-headline), Georgia, serif;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--navy);
 }
 
-/* Body text - rounded and friendly */
-.font-body {
+.headline-small {
+  font-family: var(--font-headline), Georgia, serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+}
+
+/* Body text */
+.body-large {
   font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  font-weight: 400;
+  color: var(--navy-muted);
 }
 
-/* Gradient text */
-.gradient-text {
-  background: linear-gradient(135deg, var(--teal) 0%, #06b6d4 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.body-regular {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: 400;
+  color: var(--navy-muted);
 }
 
-/* Float animation for hero */
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+.body-small {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--navy-muted);
 }
 
-.animate-float {
-  animation: float 3s ease-in-out infinite;
+/* Labels & UI elements */
+.label {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--navy-faded);
 }
 
-/* Smooth hover transitions */
-.nav-link {
+.label-accent {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* ==============================================
+   BUTTONS - Clean, Minimal, Professional
+   ============================================== */
+
+/* Primary Button - Navy */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background: var(--navy);
+  color: white;
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  transition: background 0.2s ease, transform 0.1s ease;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--navy-light);
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+}
+
+/* Secondary Button - Outline */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background: transparent;
+  color: var(--navy);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border: 1.5px solid var(--navy);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: var(--navy);
+  color: white;
+}
+
+/* Accent Button - Terracotta */
+.btn-accent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background: var(--accent);
+  color: white;
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-accent:hover {
+  background: var(--accent-dark);
+}
+
+/* Small button variant */
+.btn-sm {
+  padding: 0.625rem 1.25rem;
+  font-size: 0.8125rem;
+}
+
+/* Text link button */
+.btn-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: var(--navy);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: color 0.2s ease;
+}
+
+.btn-text:hover {
+  color: var(--accent);
+}
+
+/* Light variants for dark backgrounds */
+.btn-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background: white;
+  color: var(--navy);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-light:hover {
+  background: var(--cream);
+}
+
+.btn-outline-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background: transparent;
+  color: white;
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border: 1.5px solid white;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-outline-light:hover {
+  background: white;
+  color: var(--navy);
+}
+
+/* ==============================================
+   CARDS - Subtle, Editorial
+   ============================================== */
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem;
+  transition: border-color 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--border-dark);
+}
+
+.card-featured {
+  background: var(--white);
+  border: 1px solid var(--border-dark);
+  border-radius: 8px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(26, 39, 68, 0.06);
+}
+
+.card-dark {
+  background: var(--navy);
+  border-radius: 8px;
+  padding: 2.5rem;
+  color: white;
+}
+
+.card-dark .headline-card,
+.card-dark .headline-small {
+  color: white;
+}
+
+.card-dark p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card-warm {
+  background: var(--cream-warm);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+/* ==============================================
+   FORM INPUTS - Clean, Professional
+   ============================================== */
+
+.input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: var(--white);
+  border: 1px solid var(--border-dark);
+  border-radius: 4px;
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 1rem;
+  color: var(--navy);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgba(26, 39, 68, 0.08);
+}
+
+.input::placeholder {
+  color: var(--navy-faded);
+}
+
+.input-label {
+  display: block;
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+
+/* Select styling */
+select.input {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%234A5568' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+  padding-right: 3rem;
+}
+
+/* ==============================================
+   SECTION BACKGROUNDS
+   ============================================== */
+
+.bg-cream {
+  background-color: var(--cream);
+}
+
+.bg-cream-warm {
+  background-color: var(--cream-warm);
+}
+
+.bg-navy {
+  background-color: var(--navy);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-accent-light {
+  background-color: var(--accent-bg);
+}
+
+/* ==============================================
+   UTILITY CLASSES
+   ============================================== */
+
+.text-navy {
+  color: var(--navy);
+}
+
+.text-navy-muted {
+  color: var(--navy-muted);
+}
+
+.text-navy-faded {
+  color: var(--navy-faded);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.text-white {
+  color: white;
+}
+
+/* Text on dark backgrounds - for card-dark and footer */
+.text-white-muted {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.text-white-faded {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.text-white-subtle {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Hero price - larger variant */
+.price-hero {
+  font-family: var(--font-headline), Georgia, serif;
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--navy);
+}
+
+/* Volume price label */
+.price-volume {
+  font-family: var(--font-headline), Georgia, serif;
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Divider */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border);
+}
+
+/* Container */
+.container-narrow {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Icon container - for hand-drawn illustrations */
+.icon-illustration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-illustration svg,
+.icon-illustration img {
+  width: 100%;
+  height: auto;
+}
+
+/* Number badge - for steps/processes */
+.number-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background: var(--navy);
+  color: white;
+  font-family: var(--font-headline), Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  border-radius: 50%;
+}
+
+.number-badge-outline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background: transparent;
+  color: var(--navy);
+  font-family: var(--font-headline), Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  border: 1.5px solid var(--navy);
+  border-radius: 50%;
+}
+
+/* Price display - clean, not badge */
+.price-display {
+  font-family: var(--font-headline), Georgia, serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--navy);
+}
+
+.price-display-small {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.875rem;
+  color: var(--navy-muted);
+}
+
+/* Star rating */
+.star-rating {
+  display: flex;
+  gap: 0.125rem;
+  color: var(--accent);
+}
+
+/* Tag/badge - minimal */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.75rem;
+  background: var(--cream-warm);
+  color: var(--navy-muted);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-radius: 4px;
+}
+
+.tag-accent {
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+/* Link styling */
+a.link {
+  color: var(--navy);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+a.link:hover {
+  color: var(--accent);
+}
+
+/* ==============================================
+   ANIMATIONS - Subtle, Editorial, Sophisticated
+   ============================================== */
+
+/* Fade in from below - for scroll reveals */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade in - simple opacity */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Subtle scale in */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Hero text entrance - staggered */
+@keyframes heroEnter {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Utility classes for animations */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+.animate-hero {
+  animation: heroEnter 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Stagger delays for lists/grids */
+.animate-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.animate-delay-2 { animation-delay: 0.2s; opacity: 0; }
+.animate-delay-3 { animation-delay: 0.3s; opacity: 0; }
+.animate-delay-4 { animation-delay: 0.4s; opacity: 0; }
+.animate-delay-5 { animation-delay: 0.5s; opacity: 0; }
+
+/* Cards - subtle lift on hover */
+.card {
+  transition: border-color 0.2s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--border-dark);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(26, 39, 68, 0.08);
+}
+
+.card-featured {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-featured:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(26, 39, 68, 0.1);
+}
+
+.card-dark {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-dark:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(26, 39, 68, 0.2);
+}
+
+.card-warm {
+  transition: transform 0.3s ease, border-color 0.2s ease;
+}
+
+.card-warm:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-dark);
+}
+
+/* Button micro-interactions */
+.btn-primary,
+.btn-secondary,
+.btn-accent,
+.btn-light,
+.btn-outline-light {
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn-primary:hover,
+.btn-accent:hover,
+.btn-light:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 39, 68, 0.15);
+}
+
+.btn-secondary:hover,
+.btn-outline-light:hover {
+  transform: translateY(-2px);
+}
+
+/* Image hover - subtle zoom */
+.img-hover-zoom {
+  overflow: hidden;
+}
+
+.img-hover-zoom img {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.img-hover-zoom:hover img {
+  transform: scale(1.03);
+}
+
+/* Icon illustration hover */
+.icon-hover {
+  transition: transform 0.3s ease;
+}
+
+.icon-hover:hover {
+  transform: translateY(-4px);
+}
+
+/* Convert black icons to navy */
+.icon-navy {
+  filter: brightness(0) saturate(100%) invert(13%) sepia(25%) saturate(1200%) hue-rotate(186deg) brightness(95%) contrast(92%);
+}
+
+/* Number badge pulse on hover */
+.number-badge {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.number-badge:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(26, 39, 68, 0.2);
+}
+
+/* Nav link underline animation */
+nav a {
   position: relative;
 }
 
-.nav-link::after {
+nav a:not(.btn-primary)::after {
   content: '';
   position: absolute;
   bottom: -2px;
   left: 0;
   width: 0;
-  height: 2px;
-  background: var(--teal);
+  height: 1px;
+  background: var(--accent);
   transition: width 0.3s ease;
 }
 
-.nav-link:hover::after {
+nav a:not(.btn-primary):hover::after {
   width: 100%;
 }
 
-/* Warm button style */
-.btn-warm {
-  background: var(--navy);
-  color: white;
-  border-radius: 0.5rem;
-  font-family: var(--font-display), Georgia, serif;
-  font-weight: 600;
-  transition: all 0.2s ease;
+/* Star rating shimmer */
+.star-rating {
+  transition: transform 0.2s ease;
 }
 
-.btn-warm:hover {
-  background: var(--navy-light);
+.star-rating:hover {
+  transform: scale(1.05);
+}
+
+/* Tag hover */
+.tag,
+.tag-accent {
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.tag:hover,
+.tag-accent:hover {
   transform: translateY(-1px);
 }
 
-/* Card hover effect */
-.card-warm {
-  transition: all 0.3s ease;
+/* Input focus animation */
+.input {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.card-warm:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px -8px rgba(26, 39, 68, 0.15);
+.input:focus {
+  transform: translateY(-1px);
+}
+
+/* Section reveal animation (use with JS/Intersection Observer) */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children for grid reveals */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal-stagger.visible > *:nth-child(1) { transition-delay: 0s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.visible > *:nth-child(2) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.visible > *:nth-child(3) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.visible > *:nth-child(4) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.visible > *:nth-child(5) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.visible > *:nth-child(6) { transition-delay: 0.5s; opacity: 1; transform: translateY(0); }
+
+/* Floating subtle animation - for hero elements */
+@keyframes floatSubtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: floatSubtle 4s ease-in-out infinite;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

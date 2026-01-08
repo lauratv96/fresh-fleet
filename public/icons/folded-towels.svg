@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="#1a2744" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Bottom towel -->
+  <rect x="8" y="40" width="48" height="12" rx="1" />
+  <path d="M8 46h48" />
+  <!-- Middle towel -->
+  <rect x="10" y="28" width="44" height="10" rx="1" />
+  <path d="M10 33h44" />
+  <!-- Top towel -->
+  <rect x="12" y="18" width="40" height="8" rx="1" />
+  <path d="M12 22h40" />
+</svg>

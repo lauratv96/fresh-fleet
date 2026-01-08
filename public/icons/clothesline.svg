@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 64" fill="none" stroke="#1a2744" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Clothesline -->
+  <path d="M4 12c20 4 52 4 72 0" />
+  <!-- T-shirt -->
+  <path d="M20 14v4l-4-2v16h16V16l-4 2v-4" />
+  <path d="M20 14c0-2 2-2 4-2s4 0 4 2" />
+  <!-- Sparkle near shirt -->
+  <path d="M38 20l2-4 2 4M38 20l-2 2 4 0-2-2" />
+  <!-- Sock 1 -->
+  <path d="M48 14v14c0 4 2 6 4 6h2c2 0 3-2 3-4V14" />
+  <!-- Sock 2 -->
+  <path d="M62 14v12c0 4 2 6 4 6h2c2 0 3-2 3-4V14" />
+  <!-- Small sparkles -->
+  <circle cx="16" cy="8" r="1" fill="#1a2744" />
+  <circle cx="44" cy="10" r="1" fill="#1a2744" />
+  <path d="M70 6l1-2 1 2M70 6l-1 1 2 0" />
+</svg>
